@@ -37,7 +37,7 @@ class GildedRose
       sulfuras(item)
     when "Backstage passes to a TAFKAL80ETC concert"
       backstage_passes(item)
-    when "Conjured Mana Cake"
+    when "Conjured Mana Cake" #need to actually make this a regex for 'Conjured' + anything
       conjured(item)
     else
       puts "Not sure what the item is"

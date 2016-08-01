@@ -106,4 +106,11 @@ class TestUntitled < Test::Unit::TestCase
     assert_equal items[0].sell_in, 0
     assert_equal items[0].quality, 0
   end
+
+  def test_specialty_max
+    items = [Item.new("Aged Brie", -100, 50)]
+    GildedRose.new(items).update_quality()
+    assert_equal items[0].sell_in, -101
+    assert_equal items[0].quality, 50
+  end
 end
